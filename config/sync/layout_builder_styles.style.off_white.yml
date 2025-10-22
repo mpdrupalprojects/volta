@@ -1,0 +1,12 @@
+uuid: 9142842b-9201-4d6d-8775-3fe9b3187f7f
+langcode: en
+status: true
+dependencies: {  }
+id: off_white
+label: 'Off White'
+classes: vh-off-white-bg
+type: section
+group: background_color
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,38 @@
+{% set media_uri = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value) %}
+{% set title = content.field_title.0 %}
+{% set body = content.body.0 %}
+{% set position = content.field_position[0]['#markup'] %}
+{% set link_url = content.field_link.0['#url'] %}
+{% set link_title = content.field_link.0['#title'] %}
+
+
+{% if position == 'Right' %}
+<div class="row">
+	<div class="info-content col-lg-6 mb-3">
+        <h2 class="info-title mb-3">{{ title }}</h2>
+        <p class="info-body">{{ body }}</p>
+        {% if link_url %}<div class="ug-gold-button d-inline-block pt-4"><a class="" href="{{ link_url }}">{{ link_title }}</a></div>{% endif %}
+	</div>
+    
+    <div class="col-lg-6">
+	    <img class="info-image" src="{{ media_uri }}" alt="">
+    </div>
+</div>
+
+
+{% else %}
+
+
+<div class="row">
+    <div class="col-lg-6 mb-3">
+        <img class="info-image" src="{{ media_uri }}" alt="">
+    </div>
+    <div class="info-content col-lg-6">
+        <h2 class="info-title mb-3">{{ title }}</h2>
+        <p class="info-body">{{ body }}</p>
+        {% if link_url %}<div class="ug-gold-button d-inline-block pt-4"><a class="" href="{{ link_url }}">{{ link_title }}</a></div>{% endif %}
+    </div>
+</div>
+
+{% endif %}
+

@@ -1,0 +1,32 @@
+# Main theme library.
+global:
+  js:
+    js/bootstrap.bundle.min.js: {}
+    js/voltahall.js: {}
+  css:
+    base:
+      css/base/variables.css: {}
+      css/base/fonts.css: {}
+      css/base/base.css: {}
+      icons/line-awesome/css/line-awesome.min.css: {}
+      
+    component:
+      css/component/block.css: {}
+      css/component/breadcrumb.css: {}
+      css/component/field.css: {}
+      css/component/form.css: {}
+      css/component/header.css: {}
+      css/component/menu.css: {}
+      css/component/messages.css: {}
+      css/component/node.css: {}
+      css/component/sidebar.css: {}
+      css/component/table.css: {}
+      css/component/tabs.css: {}
+      css/component/buttons.css: {}
+    layout:
+      css/layout/default-grid.css: {}
+      css/layout/vh-grid.css: {}
+      css/layout/header.css: {}
+      css/layout/footer.css: {}
+    theme:
+      css/theme/print.css: { media: print }

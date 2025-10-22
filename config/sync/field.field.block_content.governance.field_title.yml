@@ -1,0 +1,22 @@
+uuid: 7c3b4cef-0066-4da5-9dff-c940e283dd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.governance
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.governance.field_title
+field_name: field_title
+entity_type: block_content
+bundle: governance
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

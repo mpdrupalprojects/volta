@@ -1,0 +1,8 @@
+uuid: ea649ce8-d359-4bc0-8dbc-330d6bb67399
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action
+label: 'Call to Action'
+revision: false
+description: 'A block type to add a call to action block to a page'

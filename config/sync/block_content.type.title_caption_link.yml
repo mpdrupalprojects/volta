@@ -1,0 +1,8 @@
+uuid: 44420662-97e8-47f6-bc10-6fb5aa89a4a8
+langcode: en
+status: true
+dependencies: {  }
+id: title_caption_link
+label: 'Title Caption Link'
+revision: false
+description: 'A block type to add title, caption and link'

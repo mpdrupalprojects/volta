@@ -1,0 +1,44 @@
+uuid: 53e813cb-d0bd-4166-a2db-b50ed1e498ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_caption_link
+    - field.field.block_content.title_caption_link.field_caption
+    - field.field.block_content.title_caption_link.field_link
+    - field.field.block_content.title_caption_link.field_title
+  module:
+    - link
+    - text
+id: block_content.title_caption_link.default
+targetEntityType: block_content
+bundle: title_caption_link
+mode: default
+content:
+  field_caption:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

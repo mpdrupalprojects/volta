@@ -1,0 +1,22 @@
+uuid: 8d8040bf-7542-43a8-a675-877221b5c5e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile
+    - field.storage.block_content.field_role
+  module:
+    - text
+id: block_content.profile.field_role
+field_name: field_role
+entity_type: block_content
+bundle: profile
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

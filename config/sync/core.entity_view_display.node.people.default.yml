@@ -1,0 +1,59 @@
+uuid: 344bc8ad-1be3-45e7-a1be-27c7685c101d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.people.body
+    - field.field.node.people.field_profile_photo
+    - field.field.node.people.field_role
+    - field.field.node.people.field_staff_category
+    - image.style.profile_image
+    - node.type.people
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.people.default
+targetEntityType: node
+bundle: people
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_profile_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: profile_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_role:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_staff_category:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

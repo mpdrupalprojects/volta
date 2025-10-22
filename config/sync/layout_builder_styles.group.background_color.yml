@@ -1,0 +1,10 @@
+uuid: 54cdd787-4e2c-4975-89d6-edd8f626b8e1
+langcode: en
+status: true
+dependencies: {  }
+id: background_color
+label: 'Background Color'
+multiselect: multiple
+form_type: multiple-select
+required: false
+weight: 0

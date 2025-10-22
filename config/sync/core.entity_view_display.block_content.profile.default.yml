@@ -1,0 +1,44 @@
+uuid: 0ff51952-e361-4e72-81c5-1631e2a000dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile
+    - field.field.block_content.profile.field_name
+    - field.field.block_content.profile.field_profile_image
+    - field.field.block_content.profile.field_role
+    - image.style.profile_image
+  module:
+    - image
+    - text
+id: block_content.profile.default
+targetEntityType: block_content
+bundle: profile
+mode: default
+content:
+  field_name:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_profile_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: profile_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_role:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

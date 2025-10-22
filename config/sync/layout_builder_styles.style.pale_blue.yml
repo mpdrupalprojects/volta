@@ -1,0 +1,12 @@
+uuid: ab5f2575-0032-4888-9dd3-5d4cc50861b6
+langcode: en
+status: true
+dependencies: {  }
+id: pale_blue
+label: 'Pale Blue'
+classes: ug-pale-blue-bg
+type: section
+group: background_color
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

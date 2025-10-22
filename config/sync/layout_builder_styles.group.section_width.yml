@@ -1,0 +1,10 @@
+uuid: f69a280e-6a4d-49ef-902e-4a62d708b127
+langcode: en
+status: true
+dependencies: {  }
+id: section_width
+label: 'Section Width'
+multiselect: multiple
+form_type: multiple-select
+required: false
+weight: 0

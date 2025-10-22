@@ -1,0 +1,22 @@
+:root{
+    /* Fonts */
+    --font-inter: "Inter", sans-serif;
+
+    /* Theme Primary colors */
+    --vh-blue: #08259D; 
+    --vh-yellow: #F4D700;
+
+    /* Theme Secondary Colors */
+    --vh-black: #211F1F;
+    --vh-white: #ffffff;
+    --vh-grey: #969696;   
+    --vh-ash: #676767;
+    --vh-text-black: #211F1F;
+    --vh-offwhite: #f6f6f6;
+    --ug-pale-blue: #F4F3FF;
+    --ug-grey-lines: #e7e7e7;
+
+
+    /* Background Colors */
+
+}

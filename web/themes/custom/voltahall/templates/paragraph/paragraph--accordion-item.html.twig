@@ -1,0 +1,17 @@
+{% block paragraph %}
+<div class="accordion-item mb-3">
+    <h2 class="accordion-header mb-0">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion--{{ paragraph.id() }}" aria-expanded="true" aria-controls="#accordion--{{ paragraph.id() }}">
+            <span class="fw-bold">{{ content.field_title.0 }}</span>
+        </button>
+    </h2>
+    <div {{ attributes.setAttribute('id', 'accordion--' ~ paragraph.id() ) }} class="accordion-collapse collapse" data-bs-parent="#accordionPanels">
+        <div class="accordion-body p-3">
+            {{ content.field_body.0 }}
+        </div>
+    </div>
+</div>
+{# {{ attributes.setAttribute('id', 'accordion--' ~ paragraph.id() ) }}
+
+{{ paragraph.id()}} #}
+{% endblock paragraph %}

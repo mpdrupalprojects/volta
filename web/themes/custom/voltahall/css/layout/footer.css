@@ -1,0 +1,16 @@
+/* Footer CSS */
+.bottom-footer{
+    border-top: 1px solid #00000099;
+    padding-top: 30px;
+}
+
+.footer-text{
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.footer-link{
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+}

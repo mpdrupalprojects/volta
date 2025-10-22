@@ -1,0 +1,8 @@
+uuid: 59a4be68-4c72-4fe1-8703-83e81c712e85
+langcode: en
+status: true
+dependencies: {  }
+id: governance
+label: Governance
+revision: false
+description: 'A content type to add governing bodies to the governance page'

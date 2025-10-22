@@ -1,0 +1,59 @@
+.vh-standard-wrapper{
+    margin-left: 4.5556vw;
+    margin-right: 4.5556vw;
+}
+
+.vh-full-width{
+    margin-left: -4.5556vw;
+    margin-right: -4.5556vw;
+    padding-right: 4.5556vw;
+    padding-left: 4.5556vw;
+}
+
+@media screen and (min-width: 578px){
+    .vh-standard-wrapper{
+        margin-left: 4.5556vw;
+        margin-right: 4.5556vw;
+    }
+    .vh-full-width{
+        margin-left: -4.5556vw;
+        margin-right: -4.5556vw;
+        padding-right: 4.5556vw;
+        padding-left: 4.5556vw;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .vh-standard-wrapper{
+        margin-left: 6.5556vw;
+        margin-right: 6.5556vw;
+    }
+    .vh-full-width{
+        margin-left: -6.5556vw;
+        margin-right: -6.5556vw;
+        padding-right: 6.5556vw;
+        padding-left: 6.5556vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .vh-standard-wrapper{
+        margin-left: 8.5556vw;
+        margin-right: 8.5556vw;
+    }
+
+    .vh-full-width{
+        margin-left: -8.5556vw;
+        margin-right: -8.5556vw;
+        padding-right: 8.5556vw;
+        padding-left: 8.5556vw;
+    }
+}
+
+
+
+.layout--twocol-section{
+    display: block;
+}
+

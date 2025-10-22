@@ -1,0 +1,21 @@
+uuid: fc50c0e7-70b6-47ab-9c77-607e690baf9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_category
+    - node.type.people
+  module:
+    - options
+id: node.people.field_staff_category
+field_name: field_staff_category
+entity_type: node
+bundle: people
+label: 'Staff category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,33 @@
+uuid: aed45d72-6adc-416f-9be0-c29f83313306
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mini_slideshow
+    - field.field.block_content.mini_slideshow.body
+  module:
+    - text
+id: block_content.mini_slideshow.default
+targetEntityType: block_content
+bundle: mini_slideshow
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

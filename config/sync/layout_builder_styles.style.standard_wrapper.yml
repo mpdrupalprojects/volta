@@ -1,0 +1,12 @@
+uuid: 7fd0eb5d-5316-41bd-babe-02f56c6b18d0
+langcode: en
+status: true
+dependencies: {  }
+id: standard_wrapper
+label: 'Standard Wrapper(Default)'
+classes: default-standard-wrapper
+type: section
+group: section_width
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -10

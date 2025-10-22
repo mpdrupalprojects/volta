@@ -1,0 +1,22 @@
+uuid: 2ddc6922-ebbe-42c1-bebd-180de1bfb72a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_caption_link
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.title_caption_link.field_title
+field_name: field_title
+entity_type: block_content
+bundle: title_caption_link
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

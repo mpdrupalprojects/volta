@@ -1,0 +1,12 @@
+uuid: 14d5a989-4fa6-4f39-8605-8dd687a5b1b4
+langcode: en
+status: true
+dependencies: {  }
+id: full_width
+label: 'Edge-to-edge(Full width)'
+classes: vh-full-width
+type: section
+group: section_width
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -9

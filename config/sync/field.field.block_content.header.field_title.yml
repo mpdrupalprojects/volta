@@ -1,0 +1,22 @@
+uuid: 536f95ae-7e0a-4cbd-ba37-032c076e80e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.header.field_title
+field_name: field_title
+entity_type: block_content
+bundle: header
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

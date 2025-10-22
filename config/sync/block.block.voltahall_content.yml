@@ -1,0 +1,22 @@
+uuid: 58f69606-8cd4-4579-b16d-db77a84074e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - voltahall
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: voltahall_content
+theme: voltahall
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

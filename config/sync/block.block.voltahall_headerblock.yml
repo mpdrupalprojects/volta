@@ -1,0 +1,25 @@
+uuid: 334e1cb6-0ee0-467d-bd3f-e77e6d3c6b70
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header:a4ffa7bb-41fd-4615-98bf-2f221b9bc08f'
+  module:
+    - block_content
+  theme:
+    - voltahall
+id: voltahall_headerblock
+theme: voltahall
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:a4ffa7bb-41fd-4615-98bf-2f221b9bc08f'
+settings:
+  id: 'block_content:a4ffa7bb-41fd-4615-98bf-2f221b9bc08f'
+  label: 'Header Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

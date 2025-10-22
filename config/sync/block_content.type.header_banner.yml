@@ -1,0 +1,8 @@
+uuid: 3c7b9017-60b1-414a-bf77-fc5f74c43bb9
+langcode: en
+status: true
+dependencies: {  }
+id: header_banner
+label: 'Header Banner'
+revision: false
+description: 'Use this block type to add a header banner to a page'

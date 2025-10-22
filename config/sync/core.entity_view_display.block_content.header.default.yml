@@ -1,0 +1,36 @@
+uuid: c4677db3-939a-4caf-ae3f-7eeeb99920fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.field.block_content.header.field_link
+    - field.field.block_content.header.field_title
+  module:
+    - link
+    - text
+id: block_content.header.default
+targetEntityType: block_content
+bundle: header
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

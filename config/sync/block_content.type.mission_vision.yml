@@ -1,0 +1,8 @@
+uuid: 3f020876-36ff-44df-943b-200ff69f1d51
+langcode: en
+status: true
+dependencies: {  }
+id: mission_vision
+label: 'Mission and Vision'
+revision: false
+description: 'A block to add mission, vision, moto and slogan'

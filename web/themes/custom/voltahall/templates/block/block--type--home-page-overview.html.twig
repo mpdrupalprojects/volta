@@ -1,0 +1,59 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% set title = content.field_title.0 %}
+{% set body = content.body.0 %}
+{% set link_url = content.field_link.0['#url'] %}
+{% set link_title = content.field_link.0['#title'] %}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <h4>{{ title }}</h4>
+                {{ body }}
+                <a class="vh-button-right" href="{{ content.field_link.0['#url'] }}" > {{ content.field_link.0['#title'] }} </a>
+            </div>
+            <div class="col-md-7">
+                <div class="">
+                    <div class="row align-items-center justify-content-center">
+                        {% for i in content.field_images['#items']|keys %}
+                            {% if i == 0 %}
+                                <div class="col-3 offset-md-2">
+                                   <div class="vh-featured first-feature-img">
+                                    {{ content.field_images[i] }}
+                                   </div>
+                                </div>
+                            {% elseif i == 1 %}  
+                                <div class="col-4">
+                                    <div class="vh-featured second-feature-img">
+                                        {{ content.field_images[i] }}
+                                    </div>
+                                </div>
+                            {% else %}  
+                                 <div class="col-3">
+                                    <div class="vh-featured third-feature-img">
+                                    {{ content.field_images[i] }}
+                                    </div>
+                                </div> 
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</div>  
+
+{# {{  content.field_images | json_encode(constant('JSON_PRETTY_PRINT')) }}   
+{{ dump() }} #}

@@ -1,0 +1,67 @@
+uuid: 711c36d0-9801-476e-9c73-2cbf95ef247f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission_vision
+    - field.field.block_content.mission_vision.field_background_image
+    - field.field.block_content.mission_vision.field_mission
+    - field.field.block_content.mission_vision.field_motto
+    - field.field.block_content.mission_vision.field_slogan
+    - field.field.block_content.mission_vision.field_vision
+  module:
+    - media_library
+    - text
+id: block_content.mission_vision.default
+targetEntityType: block_content
+bundle: mission_vision
+mode: default
+content:
+  field_background_image:
+    type: media_library_widget
+    weight: 30
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_mission:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_motto:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_slogan:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_vision:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

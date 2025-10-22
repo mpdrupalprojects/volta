@@ -1,0 +1,22 @@
+uuid: 68e870f0-11df-4b37-8475-faf555213b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact
+    - field.storage.block_content.field_location
+  module:
+    - text
+id: block_content.contact.field_location
+field_name: field_location
+entity_type: block_content
+bundle: contact
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

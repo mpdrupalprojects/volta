@@ -1,0 +1,12 @@
+<div class="col-lg-4 col-md-6">
+    <a class="news-card d-block mb-3" href="{{ fields.view_node.content }}">
+        <h5>{{ fields.title.content }}</h5>
+        <div class="news-cover-photo my-3">
+            {{ fields.field_image.content }}
+        </div>
+        <div class="d-flex my-2 g-1 align-items-center justify-content-between">
+            <p class="vh-link-right fw-bold" href="{{ fields.view_node.content }}">Read More</p>
+             {{ fields.created.content }}
+        </div>    
+    </a>
+</div>

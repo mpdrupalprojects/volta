@@ -1,0 +1,24 @@
+uuid: b0797d20-f65e-4de0-9742-b8815a3152cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - views
+  theme:
+    - voltahall
+id: voltahall_views_block__events_block_1
+theme: voltahall
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:events-block_1'
+settings:
+  id: 'views_block:events-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

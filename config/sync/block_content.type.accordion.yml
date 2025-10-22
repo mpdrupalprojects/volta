@@ -1,0 +1,8 @@
+uuid: 2df6ae32-bfab-4c47-a9cd-ea7eec8a2e53
+langcode: en
+status: true
+dependencies: {  }
+id: accordion
+label: Accordion
+revision: false
+description: 'A block type to accordion block to a page'

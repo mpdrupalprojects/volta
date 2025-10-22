@@ -1,0 +1,22 @@
+uuid: e3485944-9b86-4397-97a7-58945c76d10f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_caption_link
+    - field.storage.block_content.field_caption
+  module:
+    - text
+id: block_content.title_caption_link.field_caption
+field_name: field_caption
+entity_type: block_content
+bundle: title_caption_link
+label: Caption
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

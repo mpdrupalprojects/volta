@@ -1,0 +1,18 @@
+uuid: c7004fcb-5303-4c21-8ce9-d3a5cc0f9fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.portrait
+  module:
+    - crop
+name: portrait
+label: Portrait
+effects:
+  79b40ee0-ab5a-4f9b-a722-363fb3e3e1c3:
+    uuid: 79b40ee0-ab5a-4f9b-a722-363fb3e3e1c3
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: portrait
+      automatic_crop_provider: null

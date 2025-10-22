@@ -1,0 +1,24 @@
+uuid: d826669d-6d6a-4ddc-b955-6a13cedc912d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_banner
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.header_banner.body
+field_name: body
+entity_type: block_content
+bundle: header_banner
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

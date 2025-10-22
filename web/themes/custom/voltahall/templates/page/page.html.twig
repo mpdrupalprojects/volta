@@ -1,0 +1,63 @@
+<header class="">
+    <div class="first-navigation-header vh-blue-bg py-2">
+        <div class="vh-standard-wrapper">
+            <a class="mainug-link" href="#" target="_blank">University of Ghana</a>
+        </div> 
+    </div>
+</header>
+
+<section class="main-navigation-header">
+    <div class="vh-standard-wrapper py-2 d-flex align-items-center">
+        <div class="d-flex align-items-center">
+            {{ page.header }}
+            
+            <button data-bs-toggle="collapse" data-bs-target=".search-bar" class="search-bar-toggler d-md-block d-sm-block d-lg-none"><span class="search-bar-toggler-icon"></span></button>   
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2" aria-controls="navcol-2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>    
+
+        {{ page.primary_menu }}
+
+        {% if page.search_section %}
+        <button data-toggle="collapse" data-target=".search-bar" class="search-bar-toggler d-lg-block d-none"><span class="search-bar-toggler-icon"></span></button>   
+        {% endif %}
+    </div>
+
+</section>
+
+
+{{ page.hero }} 
+<div class="vh-standard-wrapper">
+    {{ page.content }}
+</div>
+{{ page.sidebar_first }}
+{{ page.sidebar_second }}
+
+{# {% if breadcrumb %}
+    {{ breadcrumb }}
+{% endif %} #}
+
+
+
+<footer class="vh-blue-bg py-5">
+    <div class="vh-standard-wrapper">
+        {{ page.footer}}
+        <div class="bottom-footer">
+            <div class="row" id="copyright">
+            <div class="col-sm-12 col-md-4">
+                <p class="mb-3 footer-text">Copyright © {{ calendar_year }}, University of Ghana</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="d-flex gap-4 justify-content-md-center mb-3">
+                    <a class="footer-link" href="#">Privacy Policy </a>
+                    <a class="footer-link" href="#">Terms of Use </a>
+                </div>     
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <p class="float-md-end footer-text">Developed by University of Ghana IT Directorate</p>
+            </div> 
+            </div>
+        </div>    
+    </div>
+</footer>

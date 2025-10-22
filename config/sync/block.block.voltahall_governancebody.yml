@@ -1,0 +1,25 @@
+uuid: 26b93f6e-fa93-449e-a060-9176985ba330
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:governance:49936119-4423-4065-8a07-4e3cd54244d8'
+  module:
+    - block_content
+  theme:
+    - voltahall
+id: voltahall_governancebody
+theme: voltahall
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:49936119-4423-4065-8a07-4e3cd54244d8'
+settings:
+  id: 'block_content:49936119-4423-4065-8a07-4e3cd54244d8'
+  label: 'Governance Body'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

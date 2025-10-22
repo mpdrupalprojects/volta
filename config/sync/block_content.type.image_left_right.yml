@@ -1,0 +1,8 @@
+uuid: 4dbcab81-a1f1-4975-81c1-22e665710026
+langcode: en
+status: true
+dependencies: {  }
+id: image_left_right
+label: 'Image Left Right'
+revision: false
+description: 'A block type containing Text, Image and Links. The image can be positioned left or right by selection'

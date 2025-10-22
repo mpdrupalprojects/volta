@@ -1,0 +1,12 @@
+uuid: b05afbd4-1290-45c5-aba5-d224d38fc18a
+langcode: en
+status: true
+dependencies: {  }
+id: volta_blue
+label: 'Volta Blue'
+classes: vh-blue-bg
+type: section
+group: background_color
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

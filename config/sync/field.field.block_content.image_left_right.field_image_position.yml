@@ -1,0 +1,21 @@
+uuid: 8c795cbb-8d5a-4982-a7b0-959959cbe77b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_left_right
+    - field.storage.block_content.field_image_position
+id: block_content.image_left_right.field_image_position
+field_name: field_image_position
+entity_type: block_content
+bundle: image_left_right
+label: 'Image Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Left
+  off_label: Right
+field_type: boolean

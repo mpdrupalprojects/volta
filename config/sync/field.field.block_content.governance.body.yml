@@ -1,0 +1,24 @@
+uuid: b4359932-4b8d-43ab-8b82-fe5bafe43154
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.governance
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.governance.body
+field_name: body
+entity_type: block_content
+bundle: governance
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

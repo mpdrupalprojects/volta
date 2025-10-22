@@ -1,0 +1,25 @@
+uuid: 9c7aa937-d7cb-41a7-84f2-ea8c97707158
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:mission_vision:a604e856-c222-4681-9866-b2f3613b3362'
+  module:
+    - block_content
+  theme:
+    - voltahall
+id: voltahall_missionandvisionblock
+theme: voltahall
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:a604e856-c222-4681-9866-b2f3613b3362'
+settings:
+  id: 'block_content:a604e856-c222-4681-9866-b2f3613b3362'
+  label: 'Mission and Vision Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

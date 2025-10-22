@@ -1,0 +1,38 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div class="contact-block vh-off-white-bg p-4 mb-3">
+            <h2> Contact us</h2>
+            {% if content.field_location.0 %}
+              <div class="location mb-3">
+                <h6> Location: </h6>
+                {{ content.field_location.0 }}
+              </div> 
+            {% endif %}
+            {% if content.field_contact_number.0 %}
+              <div class="contact-number mb-3">
+                <h6> Contact Us: </h6>
+                {{ content.field_contact_number.0 }}
+              </div>  
+            {% endif %}
+            {% if content.field_email.0 %}
+              <div class="email-address mb-3">
+                <h6> Email Address: </h6>
+                {{ content.field_email.0 }}
+              </div>  
+            {% endif %}
+        </div>
+    {% endblock %}
+</div>    

@@ -1,0 +1,12 @@
+{% set background_gradient = 'linear-gradient(90deg, #08259D 0%, rgba(8, 37, 157, 0) 100%)' %}
+<div class="col-12">
+    <a class="news-spotlight d-block br-12 p-4 mb-4" href="{{ fields.view_node.content }}" style="background-image:{{ background_gradient }}, url({{ fields.field_image.content }}) ">
+        <div class="news-spotlight-details">
+            <h5 class="news-spotlight-header w-75">
+                {{ fields.title.content }}
+            </h5>
+            <span>{{ fields.created.content }}</span>
+        </div>    
+    </a>
+</div>
+

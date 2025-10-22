@@ -1,0 +1,8 @@
+uuid: 3afc139d-5d85-4beb-ae6c-63440d422218
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+revision: false
+description: 'A block type to add contact block'

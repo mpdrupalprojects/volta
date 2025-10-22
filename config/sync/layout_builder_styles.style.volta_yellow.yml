@@ -1,0 +1,12 @@
+uuid: 5c30dd06-42ee-4fc0-b8cc-9f7127fcf7a1
+langcode: en
+status: true
+dependencies: {  }
+id: volta_yellow
+label: 'Volta Yellow'
+classes: vh-yellow-bg
+type: section
+group: background_color
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

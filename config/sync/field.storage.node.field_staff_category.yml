@@ -1,0 +1,36 @@
+uuid: 0a6e2646-7711-4986-9289-7e5b6c0f867e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_staff_category
+field_name: field_staff_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hall_management
+      label: 'Hall Management'
+    -
+      value: warden_s_office
+      label: "Warden's Office"
+    -
+      value: tutorial_office
+      label: 'Tutorial Office'
+    -
+      value: bursar_s_office
+      label: "Bursar's Office"
+    -
+      value: national_service
+      label: 'National Service'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

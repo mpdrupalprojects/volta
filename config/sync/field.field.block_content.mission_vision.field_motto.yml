@@ -1,0 +1,22 @@
+uuid: 99cd1560-ddd3-4f0f-bbaf-e16bc8009e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission_vision
+    - field.storage.block_content.field_motto
+  module:
+    - text
+id: block_content.mission_vision.field_motto
+field_name: field_motto
+entity_type: block_content
+bundle: mission_vision
+label: Motto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,136 @@
+/* Page Banner */
+.page-banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+    background-position: center center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: calc(100px + 20vw);
+    flex-direction: column;
+}
+
+.page-title{
+    color: var(--vh-white);
+}
+
+.page-banner-breadcrumbs ol{
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+}
+.page-banner-breadcrumbs ol li{
+    color: var(--vh-white);
+    font-size: 13.5px;
+    font-weight: 300;
+}
+
+.page-banner-breadcrumbs ol li a{
+    text-decoration: none;
+    color: var(--vh-white);
+    font-weight: 300px;
+    font-size: 13.5px;
+}
+
+.page-banner-breadcrumbs ol li a::after{
+    font-family: "Line Awesome Free";
+    content: "\f105";
+    font-size: inherit;
+    font-weight: 600;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.page-banner-breadcrumbs ol li:last-child,
+.page-banner-breadcrumbs ol li:nth-child(2n),
+.page-banner-breadcrumbs ol li:nth-child(2n+3) {
+    padding-left: 10px;
+}
+
+
+/* Displays for News and Announcements Node */
+.node_content{
+    margin: 0 8.5%;
+}
+
+@media screen and (max-width: 575px) {
+    .node_content {
+        margin: 0%;
+    }
+}
+
+.page-image img{
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+/* Display for Upcoming Events Node */
+.event_title{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.event_side_card {
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    position: sticky;
+    top: 10px;
+    margin-bottom: 30px;
+}
+
+.event_date_time {
+    border-bottom: 1px solid var(--vh-black);
+    gap: 1rem;
+}
+
+.event_date_sq {
+    background-color: var(--vh-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    flex: 30%;
+    gap: 5px;
+}
+
+.event_date_sq> .day, .event_date_sq> .month {
+    color: white;
+    text-transform: uppercase;
+}
+
+.event_date_sq> .day {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.event_date_sq> .month {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.event_date_time_alt {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 0;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.event_calendar_share .a2a_kit {
+    border: 1px solid var(--vh-ash);
+    border-radius: 8px;
+    display: flex;
+    padding: 13px 22px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 0 1 50%;
+}
+
+
+

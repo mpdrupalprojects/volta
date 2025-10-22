@@ -1,0 +1,12 @@
+uuid: a67ab91b-ef07-4714-b7f6-50ecd3648ee4
+langcode: en
+status: true
+dependencies: {  }
+label: 'News Cover Photo'
+id: news_cover_photo
+description: 'A crop type for news cover photo'
+aspect_ratio: '16:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

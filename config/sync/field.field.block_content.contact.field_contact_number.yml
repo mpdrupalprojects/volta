@@ -1,0 +1,21 @@
+uuid: 1c8d6529-4854-444d-92fc-90516fa31c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact
+    - field.storage.block_content.field_contact_number
+  module:
+    - telephone
+id: block_content.contact.field_contact_number
+field_name: field_contact_number
+entity_type: block_content
+bundle: contact
+label: 'Contact Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

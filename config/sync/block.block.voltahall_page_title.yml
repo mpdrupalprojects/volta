@@ -1,0 +1,30 @@
+uuid: a6597191-3ada-41e6-818b-d20a01811559
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - voltahall
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: voltahall_page_title
+theme: voltahall
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      facilities: facilities
+      page: page

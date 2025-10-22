@@ -1,0 +1,54 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% set media_url = file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value) %}
+
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+    {% set media_url = file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value) %}
+    {% set background_gradient = 'linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(8, 37, 157, 0.8) 55.36%)' %}
+    <div class="vh-full-width mission-vision-block" style="background-image:{{ background_gradient }}, url({{ media_url }});">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="motto mb-5">
+            <div class="sm-heading"><hr><span>{{ content.field_motto['#title'] }}</span></div>
+            {{ content.field_motto.0 }}
+          </div>
+          <div class="slogan mb-3">  
+            <div class="sm-heading"><hr><span>{{ content.field_slogan['#title'] }}</span></div>
+            {{ content.field_slogan.0 }}
+          </div>  
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mission vh-yellow-bg br-12 mb-4">
+                        <h3 class="mb-3">{{ content.field_mission['#title'] }}</h3>
+                        {{ content.field_mission.0 }}
+                    </div>    
+                </div>
+                <div class="col-md-6">
+                    <div class="vision vh-white-bg br-12">
+                        <h3 class="mb-3">{{ content.field_vision['#title'] }}</h3>
+                        {{ content.field_vision.0 }}
+                    </div>    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+
+  {# {{ content.field_motto | json_encode(constant('JSON_PRETTY_PRINT')) }}    #}
+</div>  

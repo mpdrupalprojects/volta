@@ -1,0 +1,8 @@
+uuid: f2e48c11-a733-4006-8c8e-81cdc16c3997
+langcode: en
+status: true
+dependencies: {  }
+id: profile
+label: Profile
+revision: false
+description: 'A block type to add a profile with Name, Portfolio and Image'

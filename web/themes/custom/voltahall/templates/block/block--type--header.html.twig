@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+         <div class="header d-flex g-1 align-items-center justify-content-between flex-wrap">
+            <h2>{{ content.field_title.0 }}</h2>
+            {% if content.field_link.0 %}
+            <div class="">
+              <a class="vh-button-right" href="{{ content.field_link.0['#url'] }}" > {{ content.field_link.0['#title'] }} </a>
+            </div>
+          {% endif %}
+        </div> 
+    {% endblock %}
+</div>    

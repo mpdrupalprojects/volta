@@ -1,0 +1,21 @@
+uuid: 77e17536-e376-4e12-809f-769c0550e4a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_breadcrumbs
+    - node.type.basic_layout_page
+id: node.basic_layout_page.field_show_breadcrumbs
+field_name: field_show_breadcrumbs
+entity_type: node
+bundle: basic_layout_page
+label: 'Show breadcrumbs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,33 @@
+uuid: 0f41b61d-8b22-4916-958b-af4f6be55905
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - field.field.block_content.call_to_action.body
+  module:
+    - text
+id: block_content.call_to_action.default
+targetEntityType: block_content
+bundle: call_to_action
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

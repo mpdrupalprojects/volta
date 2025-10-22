@@ -1,0 +1,22 @@
+uuid: ad2f429e-9b52-41c8-9d0d-acc6ae3d8c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission_vision
+    - field.storage.block_content.field_slogan
+  module:
+    - text
+id: block_content.mission_vision.field_slogan
+field_name: field_slogan
+entity_type: block_content
+bundle: mission_vision
+label: Slogan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

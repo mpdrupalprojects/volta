@@ -1,0 +1,8 @@
+uuid: 20e9b46f-48ba-40f8-88f0-0658e014b4ca
+langcode: en
+status: true
+dependencies: {  }
+id: mini_slideshow
+label: 'Mini Slideshow'
+revision: false
+description: 'A small slidehow to add along side some supporting text in a grid'

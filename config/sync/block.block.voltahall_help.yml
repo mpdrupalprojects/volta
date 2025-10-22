@@ -1,0 +1,22 @@
+uuid: 2638dd5e-5c8c-4dac-8d24-55d206388bfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - voltahall
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: voltahall_help
+theme: voltahall
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

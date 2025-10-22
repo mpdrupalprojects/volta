@@ -1,0 +1,25 @@
+uuid: ff3ead50-6ce9-443d-80b2-f221c95c2b74
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:home_page_overview:80389025-3b74-419f-834a-9d1699abcf56'
+  module:
+    - block_content
+  theme:
+    - voltahall
+id: voltahall_homepageoverview
+theme: voltahall
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:80389025-3b74-419f-834a-9d1699abcf56'
+settings:
+  id: 'block_content:80389025-3b74-419f-834a-9d1699abcf56'
+  label: 'Home Page overview'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

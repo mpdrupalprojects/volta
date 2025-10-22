@@ -1,0 +1,38 @@
+uuid: b0d83b9a-2708-4548-bc9e-3f125a3056e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact
+    - field.field.block_content.contact.field_contact_number
+    - field.field.block_content.contact.field_email
+    - field.field.block_content.contact.field_location
+  module:
+    - text
+id: block_content.contact.default
+targetEntityType: block_content
+bundle: contact
+mode: default
+content:
+  field_contact_number:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_location:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

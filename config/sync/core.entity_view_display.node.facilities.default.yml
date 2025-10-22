@@ -1,0 +1,28 @@
+uuid: c7e11991-c2e7-48d3-9b79-91da6720c661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.facilities.body
+    - node.type.facilities
+  module:
+    - text
+    - user
+id: node.facilities.default
+targetEntityType: node
+bundle: facilities
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+# Schema for the configuration files of the voltahall theme.
+voltahall.settings:
+  type: theme_settings
+  label: 'voltahall settings'
+  mapping:
+    example:
+      type: string
+      label: Example

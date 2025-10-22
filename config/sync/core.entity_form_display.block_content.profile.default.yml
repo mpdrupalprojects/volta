@@ -1,0 +1,58 @@
+uuid: e8aecf89-259c-4ee9-87c7-d361bda190d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile
+    - field.field.block_content.profile.field_name
+    - field.field.block_content.profile.field_profile_image
+    - field.field.block_content.profile.field_role
+    - image.style.medium
+  module:
+    - image_widget_crop
+    - text
+id: block_content.profile.default
+targetEntityType: block_content
+bundle: profile
+mode: default
+content:
+  field_name:
+    type: text_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profile_image:
+    type: image_widget_crop
+    weight: 28
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: medium
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - profile
+      crop_types_required: {  }
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
+    third_party_settings: {  }
+  field_role:
+    type: text_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

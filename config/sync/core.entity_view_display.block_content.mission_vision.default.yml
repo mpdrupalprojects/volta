@@ -1,0 +1,56 @@
+uuid: a4354aa0-167b-45f7-b7c2-6cace897d872
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission_vision
+    - field.field.block_content.mission_vision.field_background_image
+    - field.field.block_content.mission_vision.field_mission
+    - field.field.block_content.mission_vision.field_motto
+    - field.field.block_content.mission_vision.field_slogan
+    - field.field.block_content.mission_vision.field_vision
+  module:
+    - text
+id: block_content.mission_vision.default
+targetEntityType: block_content
+bundle: mission_vision
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_mission:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_motto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_slogan:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_vision:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

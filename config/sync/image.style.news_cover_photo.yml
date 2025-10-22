@@ -1,0 +1,18 @@
+uuid: 2130b9e7-a2f6-49af-bbe8-cc8d108a068d
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.news_cover_photo
+  module:
+    - crop
+name: news_cover_photo
+label: 'News Cover Photo'
+effects:
+  c493e733-f80d-4193-8ca4-37259e2e61f0:
+    uuid: c493e733-f80d-4193-8ca4-37259e2e61f0
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: news_cover_photo
+      automatic_crop_provider: null

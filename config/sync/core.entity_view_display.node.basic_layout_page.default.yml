@@ -1,0 +1,98 @@
+uuid: d22ca881-1021-4152-b0a6-572cf24bc39f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_layout_page.body
+    - field.field.node.basic_layout_page.field_page_banner_image
+    - field.field.node.basic_layout_page.field_show_breadcrumbs
+    - field.field.node.basic_layout_page.layout_builder__layout
+    - node.type.basic_layout_page
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components:
+          755d6593-e731-4005-8e2b-d731045558cb:
+            uuid: 755d6593-e731-4005-8e2b-d731045558cb
+            region: null
+            configuration:
+              id: 'field_block:node:basic_layout_page:field_page_banner_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          8c8a2e4d-0040-4287-a468-5668722b2c79:
+            uuid: 8c8a2e4d-0040-4287-a468-5668722b2c79
+            region: null
+            configuration:
+              id: 'field_block:node:basic_layout_page:field_show_breadcrumbs'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: boolean
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.basic_layout_page.default
+targetEntityType: node
+bundle: basic_layout_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_page_banner_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: null
+  field_show_breadcrumbs:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: null
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true

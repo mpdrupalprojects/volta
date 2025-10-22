@@ -1,0 +1,22 @@
+uuid: 0012287c-64b6-457f-811b-7beccbe08817
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mission_vision
+    - field.storage.block_content.field_vision
+  module:
+    - text
+id: block_content.mission_vision.field_vision
+field_name: field_vision
+entity_type: block_content
+bundle: mission_vision
+label: Vision
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

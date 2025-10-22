@@ -1,0 +1,158 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+
+    
+
+    <div class="event_node_content">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="events-card">
+                    {% if content.field_event_image.0 %}
+                    <div class="event_banner mb-5">
+                        {{ content.field_event_image.0 }}
+                    </div>
+                    {% endif %}
+                    <div class="event_title pb-4">
+                        <h2> {{ label }} </h2>
+                    </div>  
+                    <div class="event_details mb-3 pt-4">
+                    {% if content.body %}
+                        <h5 class="mb-4"> Details</h5>
+                        {{ content.body }}
+                    {% endif %}
+                    </div>
+
+                    <div class="event_side_card d-md-none">
+                        <div class="event_date_time d-flex pb-4">
+                    
+                            <div class="event_date_sq">
+                            {% if content.field_date.0 %}
+                                <span class="day">{{ node.field_date.value|date('d') }}</span>
+                                <span class="month">{{ node.field_date.value|date('M') }}</span>
+                            {% endif %}
+                            {% if content.field_date_range.0 %}
+                                <span class="day">{{ node.field_date_range.start_date|date('d') }}</span>
+                                <span class="month">{{ node.field_date_range.start_date|date('M') }}</span>
+                            {% endif %}  
+                            </div>
+
+
+                            <div class="event_date_time_alt">
+                            {% if content.field_date.0 %}<span class="">{{ content.field_date.0 }}</span>{% endif %}
+                            {% if content.field_date_range.0 %}<span class="">{{ content.field_date_range.0 }}</span>{% endif %}
+                            {# <span>{{ content.field_date_range.0 }}</span> #}
+                            {# {{ node.field_date_range.start_date|date('d') }} #}
+                            {# {{ node.field_date_range.start_date|date('M') }} #}
+
+                            {% if content.field_time.0 %}<span class="">{{ content.field_time.0 }}</span>{% endif %}
+                            {% if content.field_time_range.0 %}<span class="">{{ content.field_time_range.0 }}</span>{% endif %}
+                            </div>
+                        </div> 
+                        {# {% if content.field_date_format.0 %}<span class="date">{{ content.field_date_format.0 }}</span>{% endif %} #}
+                
+                        {# {% if content.field_time_range.0 %}<span class="time">{{ content.field_time_range.0 }}</span>{% endif %} #}
+
+                        {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue"><iconify-icon icon="gg:pin" width="24" height="24"></iconify-icon> {{ content.field_venue.0 }}</span></div>{% endif %}
+
+                        <div class="event_calendar_share d-flex mt-3">
+                            {% set addcalendar = content.field_add_to_calendar.0["#markup"] %}
+                            {% if addcalendar != "Add to Calendar Disabled" %} {{ content.field_add_to_calendar }} {% endif %}
+                            <span class="a2a_kit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M10.25 0.5C9.69687 0.5 9.25 0.946875 9.25 1.5C9.25 2.05313 9.69687 2.5 10.25 2.5H12.8344L6.54375 8.79375C6.15312 9.18437 6.15312 9.81875 6.54375 10.2094C6.93437 10.6 7.56875 10.6 7.95937 10.2094L14.25 3.91563V6.5C14.25 7.05312 14.6969 7.5 15.25 7.5C15.8031 7.5 16.25 7.05312 16.25 6.5V1.5C16.25 0.946875 15.8031 0.5 15.25 0.5H10.25ZM2.75 1.5C1.36875 1.5 0.25 2.61875 0.25 4V14C0.25 15.3813 1.36875 16.5 2.75 16.5H12.75C14.1313 16.5 15.25 15.3813 15.25 14V10.5C15.25 9.94687 14.8031 9.5 14.25 9.5C13.6969 9.5 13.25 9.94687 13.25 10.5V14C13.25 14.275 13.025 14.5 12.75 14.5H2.75C2.475 14.5 2.25 14.275 2.25 14V4C2.25 3.725 2.475 3.5 2.75 3.5H6.25C6.80312 3.5 7.25 3.05312 7.25 2.5C7.25 1.94687 6.80312 1.5 6.25 1.5H2.75Z" fill="#211F1F"/>
+                                </svg>
+                                <a class="a2a_dd addtoany_share" data-a2a-url="{{ url }}" data-a2a-title="{{ node.title.value }}"> Share </a>
+                            </span>  
+                        </div>
+                    </div>    
+                    {% if content.field_speakers.0 %}
+                        <div class="mt-5 mb-5 event_speakers">
+                            <h5 class="mb-4"> Speakers </h5>
+                            <div class="row">
+                                {% for i in content.field_speakers["#items"]|keys %}
+                                    {{ content.field_speakers[i] }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}   
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event_side_card d-md-block d-none">
+                    <div class="event_date_time d-flex pb-4">
+                
+                        <div class="event_date_sq">
+                        {% if content.field_date.0 %}
+                            <span class="day">{{ node.field_date.value|date('d') }}</span>
+                            <span class="month">{{ node.field_date.value|date('M') }}</span>
+                        {% endif %}
+                        {% if content.field_date_range.0 %}
+                            <span class="day">{{ node.field_date_range.start_date|date('d') }}</span>
+                            <span class="month">{{ node.field_date_range.start_date|date('M') }}</span>
+                        {% endif %}  
+                        </div>
+
+
+                        <div class="event_date_time_alt">
+                        {% if content.field_date.0 %}<span class="">{{ content.field_date.0 }}</span>{% endif %}
+                        {% if content.field_date_range.0 %}<span class="">{{ content.field_date_range.0 }}</span>{% endif %}
+                        {# <span>{{ content.field_date_range.0 }}</span> #}
+                        {# {{ node.field_date_range.start_date|date('d') }} #}
+                        {# {{ node.field_date_range.start_date|date('M') }} #}
+
+                        {% if content.field_time.0 %}<span class="">{{ content.field_time.0 }}</span>{% endif %}
+                        {% if content.field_time_range.0 %}<span class="">{{ content.field_time_range.0 }}</span>{% endif %}
+                        </div>
+                    </div> 
+                    {# {% if content.field_date_format.0 %}<span class="date">{{ content.field_date_format.0 }}</span>{% endif %} #}
+              
+                    {# {% if content.field_time_range.0 %}<span class="time">{{ content.field_time_range.0 }}</span>{% endif %} #}
+
+                    {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue"><iconify-icon icon="gg:pin" width="24" height="24"></iconify-icon> {{ content.field_venue.0 }}</span></div>{% endif %}
+
+                    <div class="event_calendar_share d-flex mt-3">
+                        {% set addcalendar = content.field_add_to_calendar.0["#markup"] %}
+                        {% if addcalendar != "Add to Calendar Disabled" %} {{ content.field_add_to_calendar }} {% endif %}
+                        <span class="a2a_kit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M10.25 0.5C9.69687 0.5 9.25 0.946875 9.25 1.5C9.25 2.05313 9.69687 2.5 10.25 2.5H12.8344L6.54375 8.79375C6.15312 9.18437 6.15312 9.81875 6.54375 10.2094C6.93437 10.6 7.56875 10.6 7.95937 10.2094L14.25 3.91563V6.5C14.25 7.05312 14.6969 7.5 15.25 7.5C15.8031 7.5 16.25 7.05312 16.25 6.5V1.5C16.25 0.946875 15.8031 0.5 15.25 0.5H10.25ZM2.75 1.5C1.36875 1.5 0.25 2.61875 0.25 4V14C0.25 15.3813 1.36875 16.5 2.75 16.5H12.75C14.1313 16.5 15.25 15.3813 15.25 14V10.5C15.25 9.94687 14.8031 9.5 14.25 9.5C13.6969 9.5 13.25 9.94687 13.25 10.5V14C13.25 14.275 13.025 14.5 12.75 14.5H2.75C2.475 14.5 2.25 14.275 2.25 14V4C2.25 3.725 2.475 3.5 2.75 3.5H6.25C6.80312 3.5 7.25 3.05312 7.25 2.5C7.25 1.94687 6.80312 1.5 6.25 1.5H2.75Z" fill="#211F1F"/>
+                            </svg>
+                            <a class="a2a_dd addtoany_share" data-a2a-url="{{ url }}" data-a2a-title="{{ node.title.value }}"> Share </a>
+                        </span>  
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+</article>

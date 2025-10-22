@@ -1,0 +1,19 @@
+uuid: 16bdf234-a7ee-40d9-a129-08a3abd4aa41
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_vision
+field_name: field_vision
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
