@@ -12,4 +12,8 @@
 /web/sites/*/files-private
 /simpletest
 /.ddev
+!/.ddev/config.local.yaml.dist
+!/.ddev/config.yaml
+!/.ddev/docker-compose.chromedriver.yml
+!/.ddev/docker-compose.environment.yml
 /drush
