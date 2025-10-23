@@ -1,17 +1,17 @@
-/**
- * @file
- * voltahall behaviors.
- */
-(function (Drupal) {
+// /**
+//  * @file
+//  * voltahall behaviors.
+//  */
+// (function (Drupal) {
 
-  'use strict';
+//   'use strict';
 
-  Drupal.behaviors.voltahall = {
-    attach (context, settings) {
+//   Drupal.behaviors.voltahall = {
+//     attach (context, settings) {
 
-      console.log('It works!');
+//       console.log('It works!');
 
-    }
-  };
+//     }
+//   };
 
-} (Drupal));
+// } (Drupal));

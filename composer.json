@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "3.6",
+        "drupal/better_exposed_filters": "7.0",
         "drupal/ckeditor_link_styles": "1.1",
         "drupal/classy": "2.0",
         "drupal/core-composer-scaffold": "10.5.3",
@@ -38,8 +39,8 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "prefer-stable": false,
     "config": {
         "allow-plugins": {
             "composer/installers": true,

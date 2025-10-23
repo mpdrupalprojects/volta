@@ -84,6 +84,10 @@ p{
   color: var(--vh-blue);
 }
 
+.vh-text-white{
+  color: var(--vh-white);
+}
+
 img{
   max-width: 100%;
   height: auto;
