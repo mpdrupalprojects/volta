@@ -230,6 +230,14 @@
     font-weight: 600;
 }
 
+.event-date-time::before{
+    content: url('../../icons/custom/fluent-mdl2_date-time.svg');
+}
+
+.event-venue::before{
+    content: url('../../icons/custom/gg_pin.svg');
+}
+
 
 /* Home Page Banner */
 .home-page-banner{
@@ -241,4 +249,34 @@
 
 .banner-content{
     height: 100%;
+}
+
+/* Info Block(Image Left Right*/
+.info-image-wrapper{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* People Views */
+.form-item-field-staff-category-value ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-item-field-staff-category-value ul li{
+    position: relative;
+}
+
+.form-item-field-staff-category-value ul li a{
+    color: var(--vh-black);
+    font-weight: 500;
+    text-decoration: none;
+
+}
+.form-item-field-staff-category-value ul li a.bef-link--selected{
+    color: var(--vh-blue);
 }

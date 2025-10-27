@@ -43,3 +43,56 @@
     padding-top: 1.5px;
 }
 
+/* Button Download Document Pdf Icon */
+.vh-button-document{
+    display: inline-flex;
+    padding: 12px 14px;
+    background: var(--vh-yellow);
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--vh-text-black);
+}
+
+.vh-button-document:hover{
+    border-bottom: 4px solid var(--vh-black);
+    position: relative;
+    bottom: -2px;
+    transition: border-bottom 0.05s ease-out;
+}
+
+.vh-button-document::before{
+    font-family: bootstrap-icons;
+    content: "\f63e";
+    font-size: inherit;
+    font-weight: 400;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+/* Button Download Document download Icon */
+.vh-button-download{
+    display: inline-flex;
+    padding: 12px 14px;
+    background: var(--vh-yellow);
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--vh-text-black);
+}
+
+.vh-button-download:hover{
+    border-bottom: 4px solid var(--vh-black);
+    position: relative;
+    bottom: -2px;
+    transition: border-bottom 0.05s ease-out;
+}
+
+.vh-button-download::after{
+    font-family: bootstrap-icons;
+    content: "\f1bc";
+    font-size: inherit;
+    font-weight: 400;
+    display: inline-block;
+    padding-left: 10px;
+}

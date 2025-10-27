@@ -15,6 +15,12 @@
     {% block content %}
         <div class="mini-banner py-5">
             {{ content.body.0 }}
+            {% if content.field_document.0 %}
+            <div class="mt-3 mb-3">
+              <a class="vh-button-document" href= "{{ content.field_document.0 }}"> {{ content.field_document['#items'][0].description  }} </a>
+            </div>
+            {% endif %}
         </div>
+        
     {% endblock %}
 </div>    

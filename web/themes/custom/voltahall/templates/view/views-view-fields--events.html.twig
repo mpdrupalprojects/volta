@@ -7,6 +7,17 @@
             </div>
             <div class="">
                 <h6>{{ fields.title.content }}</h6>
+
+                <div class="event-date-time d-flex align-items-center gap-2 mt-3 mb-2">
+                    <span class="date">{{ fields.field_date.content }} | {{ fields.field_time.content }} </span>
+                </div>
+
+                {% if fields.field_venue.content %}
+                <div class="event-venue d-flex align-items-center gap-2">
+                    <span class="venue"> {{ fields.field_venue.content }}</span>
+                </div>  
+                {% endif %}
+
             </div>
         </div>   
     </a>

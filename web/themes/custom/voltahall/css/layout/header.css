@@ -15,26 +15,48 @@
     margin-left: auto;
 }
 
+.main-navigation-header [role="navigation"] .navbar-links{
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+}
+
+.main-navigation-header [role="navigation"] .navbar-links li{
+    margin-right: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--ug-grey-lines);
+}
+
+.dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 @media (min-width: 992px){
     .main-navigation-header [role="navigation"] .navbar-collapse{
         display: block;
     }
+
+    .main-navigation-header [role="navigation"] .navbar-links{
+        list-style: none;
+        display:flex;
+        flex-direction: row;
+    }
+
+    .main-navigation-header [role="navigation"] .navbar-links li{
+        padding: 0;
+        border-bottom: none;
+    }
+
 }
+
 
 .collapse:not(.show) {
    display: none;
 }
 
-.main-navigation-header [role="navigation"] .navbar-links{
-    list-style: none;
-    display:flex;
-    flex-direction: row;
-}
 
-.main-navigation-header [role="navigation"] .navbar-links li{
-    margin-right: 16px; 
-}
 
 .main-navigation-header [role="navigation"] .navbar-links li a, .main-navigation-header [role="navigation"] .navbar-links .dropdown-menu li a{
     text-decoration: none;
@@ -48,15 +70,44 @@
     margin: 0;
     text-align: left;
     list-style: none;
+    background-color: var(--vh-white);
+    padding: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-menu.show {
-    display: block;
-}
+
 
 .dropdown-menu[data-bs-popper] {
     top: 100%;
     left: 0;
     margin-top: 0;
+}
+
+.search-bar-toggler{
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.search-bar-toggler-icon::after{
+    display: inline-block;
+    content:'\f52A';
+    font-family: bootstrap-icons;
+    font-size: 1.25rem;
+    color: var(--vh-ash);
+}
+
+.navbar-toggler{
+    border:none;
+    background:none;
+    padding:0;
+}
+
+.navbar-toggler-icon::before{
+    display: inline-block;
+    content:'\f479';
+    font-family: bootstrap-icons;
+    font-size: 1.25rem;
+    color: var(--vh-ash);
 }
 
