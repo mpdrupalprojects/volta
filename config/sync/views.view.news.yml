@@ -399,6 +399,8 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      link_display: custom_url
+      link_url: /news-events
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -417,9 +419,38 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: News
       defaults:
+        title: false
         css_class: true
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_image'
+  block_2:
+    id: block_2
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'News Bottom Home Page'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      defaults:
+        title: false
+        css_class: true
+        pager: false
+      display_extenders: {  }
+      block_description: 'News Bottom Home Page'
     cache_metadata:
       max-age: -1
       contexts:
@@ -701,7 +732,13 @@ display:
           items_per_page: 1
       defaults:
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
         fields: false
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See More'
       display_extenders: {  }
       block_description: 'News Section Home Page'
     cache_metadata:

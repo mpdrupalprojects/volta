@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Events
+      title: 'Upcoming Events'
       fields:
         title:
           id: title

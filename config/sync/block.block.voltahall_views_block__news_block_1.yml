@@ -1,6 +1,6 @@
 uuid: 3c2d94f8-4660-43a2-9207-52e2d05fa90d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.news
@@ -11,7 +11,7 @@ dependencies:
 id: voltahall_views_block__news_block_1
 theme: voltahall
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: 'views_block:news-block_1'
 settings:

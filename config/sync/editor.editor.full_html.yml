@@ -24,6 +24,7 @@ settings:
       - '|'
       - bulletedList
       - numberedList
+      - alignment
       - '|'
       - blockQuote
       - drupalInsertImage
@@ -34,7 +35,14 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - style
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_codeBlock:
       languages:
         -
@@ -95,6 +103,25 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Yellow header 2'
+          element: '<h2 class="vh-text-yellow">'
+        -
+          label: 'White Text'
+          element: '<p class="vh-text-white">'
+        -
+          label: 'White header 4'
+          element: '<h4 class="vh-text-white">'
+        -
+          label: 'White header 5'
+          element: '<h5 class="vh-text-white">'
+        -
+          label: 'White header 6'
+          element: '<h6 class="vh-text-white">'
+    linkit_extension:
+      linkit_enabled: false
 image_upload:
   status: true
   scheme: public

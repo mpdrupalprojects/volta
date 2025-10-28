@@ -5,9 +5,16 @@ dependencies:
   config:
     - block_content.type.image_left_right
     - field.field.block_content.image_left_right.body
+    - field.field.block_content.image_left_right.field_document
+    - field.field.block_content.image_left_right.field_image
     - field.field.block_content.image_left_right.field_image_position
+    - field.field.block_content.image_left_right.field_link
     - field.field.block_content.image_left_right.field_title
+    - image.style.news_cover_photo
   module:
+    - file
+    - image
+    - link
     - text
 id: block_content.image_left_right.default
 targetEntityType: block_content
@@ -21,13 +28,43 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_document:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: news_cover_photo
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_image_position:
     type: boolean
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
     weight: 1
     region: content

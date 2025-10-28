@@ -175,9 +175,13 @@
     text-underline-offset: 3px;
 }
 
+.news-card .vh-link-right::after{
+    transition: padding-left 0.35s ease-in-out;
+}
+
 .news-card:hover .vh-link-right::after{
     padding-left: 18px;
-    transition: padding-left 0.85s ease-in-out;
+    transition: padding-left 0.35s ease-in-out;
 }
 
 .news-spotlight{

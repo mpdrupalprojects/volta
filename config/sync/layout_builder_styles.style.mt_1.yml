@@ -1,0 +1,12 @@
+uuid: b9983bdf-e446-44d9-9447-b795bea5769f
+langcode: en
+status: true
+dependencies: {  }
+id: mt_1
+label: 'Extra Small'
+classes: mt-1
+type: section
+group: margin_top
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

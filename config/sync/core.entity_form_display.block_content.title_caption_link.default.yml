@@ -5,9 +5,11 @@ dependencies:
   config:
     - block_content.type.title_caption_link
     - field.field.block_content.title_caption_link.field_caption
+    - field.field.block_content.title_caption_link.field_document
     - field.field.block_content.title_caption_link.field_link
     - field.field.block_content.title_caption_link.field_title
   module:
+    - file
     - link_attributes
     - text
 id: block_content.title_caption_link.default
@@ -22,6 +24,13 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_link:
     type: link_attributes

@@ -5,7 +5,11 @@ dependencies:
   config:
     - block_content.type.header_banner
     - field.field.block_content.header_banner.body
+    - field.field.block_content.header_banner.field_document
+    - field.field.block_content.header_banner.field_link
   module:
+    - file
+    - link_attributes
     - text
 id: block_content.header_banner.default
 targetEntityType: block_content
@@ -21,6 +25,29 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   info:
     type: string_textfield

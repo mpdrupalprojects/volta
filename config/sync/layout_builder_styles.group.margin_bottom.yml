@@ -1,0 +1,10 @@
+uuid: b4d22dbe-f0b5-4956-8783-a4c2dd3dcb0d
+langcode: en
+status: true
+dependencies: {  }
+id: margin_bottom
+label: 'Margin Bottom'
+multiselect: single
+form_type: multiple-select
+required: false
+weight: 0

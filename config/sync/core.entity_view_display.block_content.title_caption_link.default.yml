@@ -5,9 +5,11 @@ dependencies:
   config:
     - block_content.type.title_caption_link
     - field.field.block_content.title_caption_link.field_caption
+    - field.field.block_content.title_caption_link.field_document
     - field.field.block_content.title_caption_link.field_link
     - field.field.block_content.title_caption_link.field_title
   module:
+    - file
     - link
     - text
 id: block_content.title_caption_link.default
@@ -17,10 +19,17 @@ mode: default
 content:
   field_caption:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_document:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_link:
     type: link

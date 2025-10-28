@@ -1,6 +1,6 @@
 uuid: b0797d20-f65e-4de0-9742-b8815a3152cb
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.events
@@ -11,7 +11,7 @@ dependencies:
 id: voltahall_views_block__events_block_1
 theme: voltahall
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:events-block_1'
 settings:

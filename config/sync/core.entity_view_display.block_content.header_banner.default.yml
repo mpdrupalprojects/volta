@@ -5,7 +5,11 @@ dependencies:
   config:
     - block_content.type.header_banner
     - field.field.block_content.header_banner.body
+    - field.field.block_content.header_banner.field_document
+    - field.field.block_content.header_banner.field_link
   module:
+    - file
+    - link
     - text
 id: block_content.header_banner.default
 targetEntityType: block_content
@@ -18,5 +22,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_document:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden: {  }

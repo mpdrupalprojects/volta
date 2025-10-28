@@ -5,8 +5,10 @@ dependencies:
   config:
     - block_content.type.governance
     - field.field.block_content.governance.body
+    - field.field.block_content.governance.field_document
     - field.field.block_content.governance.field_title
   module:
+    - file
     - text
 id: block_content.governance.default
 targetEntityType: block_content
@@ -19,6 +21,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_document:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_title:
     type: text_default

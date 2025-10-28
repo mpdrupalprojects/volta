@@ -15,7 +15,7 @@
     {% block content %}
     {% set media_url = file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value) %}
     {% set background_gradient = 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(360deg, rgba(0, 0, 0, 0) 74.42%, rgba(0, 0, 0, 0.6) 91.24% )' %}
-        <div class="home-page-banner" style="background-image:{{ background_gradient }}, url({{ media_url }})">
+        <div class="vh-full-width home-page-banner" style="background-image:{{ background_gradient }}, url({{ media_url }})">
             <div class="banner-content d-flex flex-column align-items-center justify-content-center text-center">
             {{ content.body.0 }}
             {% if content.field_link.0 %}

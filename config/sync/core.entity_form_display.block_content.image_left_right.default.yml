@@ -5,9 +5,16 @@ dependencies:
   config:
     - block_content.type.image_left_right
     - field.field.block_content.image_left_right.body
+    - field.field.block_content.image_left_right.field_document
+    - field.field.block_content.image_left_right.field_image
     - field.field.block_content.image_left_right.field_image_position
+    - field.field.block_content.image_left_right.field_link
     - field.field.block_content.image_left_right.field_title
+    - image.style.thumbnail
   module:
+    - file
+    - image_widget_crop
+    - link_attributes
     - text
 id: block_content.image_left_right.default
 targetEntityType: block_content
@@ -24,12 +31,48 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  field_image_position:
-    type: boolean_checkbox
+  field_document:
+    type: file_generic
     weight: 27
     region: content
     settings:
-      display_label: true
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_image:
+    type: image_widget_crop
+    weight: 28
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list: {  }
+      crop_types_required: {  }
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
+    third_party_settings: {  }
+  field_image_position:
+    type: options_buttons
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   field_title:
     type: text_textfield

@@ -1,0 +1,24 @@
+uuid: 58a00cf7-26af-414d-84a9-3dbfcbcc2451
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.people
+  module:
+    - views
+  theme:
+    - voltahall
+id: voltahall_views_block__people_block_1
+theme: voltahall
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:people-block_1'
+settings:
+  id: 'views_block:people-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

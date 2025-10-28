@@ -1,0 +1,12 @@
+uuid: 388f97cb-5888-427c-a578-0608e8e0426d
+langcode: en
+status: true
+dependencies: {  }
+id: mb_5
+label: 'Extra Large'
+classes: mb-5
+type: section
+group: margin_bottom
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

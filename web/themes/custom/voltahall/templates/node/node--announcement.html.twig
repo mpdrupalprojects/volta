@@ -8,12 +8,9 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ breadcrumb }}
 
-<div class="">
-  
 
-</div>
+
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -39,15 +36,16 @@
     
 
     <div class="node_content">
+      <div class="mt-5">
+        <div class="date-social">
+          {% set created = node.getCreatedTime|date('F j, Y') %}
+          <p>{{ created }}</p>
 
-      <div class="date-social">
-        {% set created = node.getCreatedTime|date('F j, Y') %}
-        <p>{{ created }}</p>
+        </div>  
+        <h2 class="mb-3">{{ label.0 }}</h2>
 
+        <div class="body"> {{ content.body.0 }} </div>
       </div>  
-      <h2 class="mb-3">{{ label.0 }}</h2>
-
-      <div class="body"> {{ content.body.0 }} </div>
     </div>
  
 

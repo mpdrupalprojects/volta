@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 label: Portrait
 id: portrait
-description: ''
+description: 'A crop type for the pictures at the overview section on homepage'
 aspect_ratio: '2:5'
 soft_limit_width: null
 soft_limit_height: null

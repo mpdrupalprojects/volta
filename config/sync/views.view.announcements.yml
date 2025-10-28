@@ -317,3 +317,37 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+  block_2:
+    id: block_2
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      defaults:
+        pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See More'
+      link_display: custom_url
+      link_url: /announcements
+      display_extenders: {  }
+      block_description: 'Home Page Announcements'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'

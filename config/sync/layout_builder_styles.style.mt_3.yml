@@ -1,0 +1,12 @@
+uuid: d6bf31ef-85e3-4b52-b7fb-c0a5a8b2ee0d
+langcode: en
+status: true
+dependencies: {  }
+id: mt_3
+label: Regular
+classes: mt-3
+type: section
+group: margin_top
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

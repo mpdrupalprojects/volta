@@ -1,0 +1,44 @@
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+
+  <div class="header d-flex  mb-2 g-1 align-items-center justify-content-between flex-wrap">
+    <h2>{{ view.title }}</h2>
+    {{ more }}
+  </div>  
+  
+
+
+  {% if header %}
+    {{ header }}
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+
+  <div class="row view-content">
+  {% if rows -%}
+    {{ rows }}
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  </div> 
+  
+  {{ pager }}
+
+  {{ attachment_after }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}

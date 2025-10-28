@@ -1,0 +1,27 @@
+uuid: db9576ae-29e1-4160-9b21-ba31d8ef06d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.governance
+    - field.storage.block_content.field_document
+  module:
+    - file
+id: block_content.governance.field_document
+field_name: field_document
+entity_type: block_content
+bundle: governance
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: true
+field_type: file

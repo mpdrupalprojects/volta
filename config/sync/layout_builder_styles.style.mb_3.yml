@@ -1,0 +1,12 @@
+uuid: b5309f72-d02a-4f51-a943-aeb686166e69
+langcode: en
+status: true
+dependencies: {  }
+id: mb_3
+label: Regular
+classes: mb-3
+type: section
+group: margin_bottom
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

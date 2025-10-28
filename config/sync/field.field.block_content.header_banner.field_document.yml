@@ -1,0 +1,27 @@
+uuid: c3efe73a-1013-4854-bd2c-11629aecd261
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_banner
+    - field.storage.block_content.field_document
+  module:
+    - file
+id: block_content.header_banner.field_document
+field_name: field_document
+entity_type: block_content
+bundle: header_banner
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: true
+field_type: file

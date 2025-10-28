@@ -1,0 +1,12 @@
+uuid: 1d2393a2-f4cc-477b-ad3d-ea86ba8a6f65
+langcode: en
+status: true
+dependencies: {  }
+id: mb_4
+label: Large
+classes: mb-4
+type: section
+group: margin_bottom
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

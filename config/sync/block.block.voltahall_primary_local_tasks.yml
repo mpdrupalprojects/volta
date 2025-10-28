@@ -2,6 +2,8 @@ uuid: 976f2fdb-8cb4-4591-894d-bb87ecc13e5b
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - voltahall
 _core:
@@ -9,7 +11,7 @@ _core:
 id: voltahall_primary_local_tasks
 theme: voltahall
 region: content
-weight: -9
+weight: -10
 provider: null
 plugin: local_tasks_block
 settings:
@@ -19,4 +21,8 @@ settings:
   provider: core
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

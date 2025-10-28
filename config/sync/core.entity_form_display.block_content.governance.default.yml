@@ -5,8 +5,10 @@ dependencies:
   config:
     - block_content.type.governance
     - field.field.block_content.governance.body
+    - field.field.block_content.governance.field_document
     - field.field.block_content.governance.field_title
   module:
+    - file
     - text
 id: block_content.governance.default
 targetEntityType: block_content
@@ -22,6 +24,13 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_document:
+    type: file_generic
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_title:
     type: text_textfield
