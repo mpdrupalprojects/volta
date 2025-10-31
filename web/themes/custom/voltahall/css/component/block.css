@@ -248,14 +248,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh
+    height: 100vh;
 }
 
 .banner-content{
     height: 100%;
 }
 
-/* Info Block(Image Left Right*/
+/* Info Block(Image Left Right) */
 .info-image-wrapper{
     border-radius: 8px;
     overflow: hidden;
@@ -283,4 +283,121 @@
 }
 .form-item-field-staff-category-value ul li a.bef-link--selected{
     color: var(--vh-blue);
+}
+
+/* Mini Slideshow */
+.mini-slideshow-carousel-inner{
+    border-radius: 8px;
+    height: 500px;
+}
+.slide-img{
+   height: 500px;
+}
+
+.carousel{
+    position: relative;
+}
+
+.carousel-inner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left; 
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+}
+
+.carousel-indicators-arrows{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 0 1rem;
+    z-index: 88;
+    transform: translateY(-50%);
+    gap: 12px;
+}
+
+.carousel-caption{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: var(--vh-white);
+    text-align: left;
+    z-index: 10;
+}
+
+.carousel-caption .page-title{
+    color: var(--vh-white);
+}
+
+.mini-slideshow-carousel-indicators-arrows.carousel-indicators-arrows{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    padding: 0 1rem;
+    z-index: 88;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators button{
+    border: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--vh-white);
+}
+.carousel-indicators button.active{
+    background-color: var(--vh-yellow);
+}    
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: transparent;
+    border: 0;
+    width: auto;
+}
+
+.carousel-control-next{
+    margin-left: auto;
+}
+.carousel-control-prev{
+    margin-right: auto;
+}
+
+.carousel-control-prev-icon::after{
+    content:"\f12A";
+    font-family: 'bootstrap-icons';
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--vh-white);
+}
+
+.carousel-control-next-icon::after{
+    content:"\f134";
+    font-family: 'bootstrap-icons';
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--vh-white);
+}
+
+/* Executives */
+.show-more-less{
+    color: var(--vh-black);
 }

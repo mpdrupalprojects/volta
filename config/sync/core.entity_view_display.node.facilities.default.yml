@@ -4,10 +4,47 @@ status: true
 dependencies:
   config:
     - field.field.node.facilities.body
+    - field.field.node.facilities.field_caption
+    - field.field.node.facilities.field_email
+    - field.field.node.facilities.field_page_banner_image
+    - field.field.node.facilities.field_phone_number
+    - field.field.node.facilities.field_slideshow
+    - field.field.node.facilities.layout_builder__layout
     - node.type.facilities
   module:
+    - entity_reference_revisions
+    - layout_builder
+    - telephone
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components:
+          300344df-2eff-4892-909a-b5c46ebbedce:
+            uuid: 300344df-2eff-4892-909a-b5c46ebbedce
+            region: null
+            configuration:
+              id: 'field_block:node:facilities:field_slideshow'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.facilities.default
 targetEntityType: node
 bundle: facilities
@@ -20,9 +57,50 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_email:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_page_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_phone_number:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_slideshow:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 106
+    region: null
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true

@@ -1,0 +1,48 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div class="executives-block py-5">
+            <div class="executives-header">
+                <h3 class="text-center">{{ content.field_title.0 }}</h3>
+                <div class="text-center w-75 mx-auto">{{ content.body.0 }}</div>
+            </div>
+            <div class="executives-content mt-4">
+                
+                    {% if content.field_profiles['#items']|length < 5 %}
+                    <div class="row">
+                        {% for i in 0..3  %}
+                            {{ content.field_profiles[i] }}   
+                        {% endfor %}
+                    </div>    
+                    {% else %} 
+                    <div class="row">  
+                        {% for i in 0..3  %}
+                            {{ content.field_profiles[i] }}   
+                        {% endfor %}
+                    </div>  
+                    <div class="collapse row" id="part-two">   
+                        {% for i in content.field_profiles['#items']|keys %}
+                            {{ content.field_profiles[i+4] }}   
+                        {% endfor %}
+                    </div>    
+                    {% endif %}
+
+                    <a class="show-more-less text-center mt-3 link-dark d-block fw-bold" data-bs-toggle="collapse" href="#part-two" aria-expanded="false" aria-controls="collapseExample">Show More</a>
+
+                
+            </div>
+        </div>
+    {% endblock %}
+</div>    

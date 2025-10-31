@@ -1,0 +1,43 @@
+uuid: 3bebfc84-d56b-4712-ace1-b067cef617c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_logo
+    - field.field.block_content.home_page_logo.field_home_page_logo
+    - field.field.block_content.home_page_logo.field_link
+    - image.style.thumbnail
+  module:
+    - image
+    - link_attributes
+id: block_content.home_page_logo.default
+targetEntityType: block_content
+bundle: home_page_logo
+mode: default
+content:
+  field_home_page_logo:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_attributes
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+hidden:
+  info: true

@@ -1,0 +1,22 @@
+uuid: 9e799599-7f9d-403e-8ada-aac79bca8186
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.trailblazers
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.trailblazers.field_title
+field_name: field_title
+entity_type: block_content
+bundle: trailblazers
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

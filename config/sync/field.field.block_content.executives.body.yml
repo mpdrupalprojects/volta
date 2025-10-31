@@ -1,16 +1,16 @@
-uuid: e9afd143-9601-4ef0-b668-5bd4035f6ffb
+uuid: 910ea2d5-4f1d-444b-acea-33f5ba12099c
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.mini_slideshow
+    - block_content.type.executives
     - field.storage.block_content.body
   module:
     - text
-id: block_content.mini_slideshow.body
+id: block_content.executives.body
 field_name: body
 entity_type: block_content
-bundle: mini_slideshow
+bundle: executives
 label: Body
 description: ''
 required: false

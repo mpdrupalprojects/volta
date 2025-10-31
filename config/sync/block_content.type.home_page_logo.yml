@@ -1,0 +1,8 @@
+uuid: f41a5b2c-42ed-49b6-b3ae-c3ee6cc474ca
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_logo
+label: 'Home page Logo'
+revision: false
+description: 'A block for the home page logo'

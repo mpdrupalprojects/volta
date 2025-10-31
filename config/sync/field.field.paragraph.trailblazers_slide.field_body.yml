@@ -1,0 +1,22 @@
+uuid: d1e3c1a1-789f-40f8-b0bb-a2428065602c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.trailblazers_slide
+  module:
+    - text
+id: paragraph.trailblazers_slide.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: trailblazers_slide
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

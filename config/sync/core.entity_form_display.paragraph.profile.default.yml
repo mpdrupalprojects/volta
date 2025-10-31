@@ -1,0 +1,52 @@
+uuid: 916a7120-c351-4e01-a692-4deb04079ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile.field_name
+    - field.field.paragraph.profile.field_profile_image
+    - field.field.paragraph.profile.field_role
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.profile
+  module:
+    - image_widget_crop
+    - text
+id: paragraph.profile.default
+targetEntityType: paragraph
+bundle: profile
+mode: default
+content:
+  field_name:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profile_image:
+    type: image_widget_crop
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - profile
+      crop_types_required: {  }
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
+    third_party_settings: {  }
+  field_role:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

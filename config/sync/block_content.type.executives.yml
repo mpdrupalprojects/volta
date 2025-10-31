@@ -1,0 +1,8 @@
+uuid: d80ea6b9-6285-49b3-993e-a4b186b7f3b2
+langcode: en
+status: true
+dependencies: {  }
+id: executives
+label: Executives
+revision: false
+description: 'A block to add SCR, JCR and Alumni executives'

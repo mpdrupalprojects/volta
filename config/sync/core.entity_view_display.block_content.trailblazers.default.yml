@@ -1,0 +1,33 @@
+uuid: 8685ec30-aeeb-49be-9ce1-5c153a8c4789
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.trailblazers
+    - field.field.block_content.trailblazers.field_title
+    - field.field.block_content.trailblazers.field_trailblazer_slides
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.trailblazers.default
+targetEntityType: block_content
+bundle: trailblazers
+mode: default
+content:
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_trailblazer_slides:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

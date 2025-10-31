@@ -1,0 +1,30 @@
+uuid: 90bac3b9-8b8b-4cfe-a338-2de97ba860e8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:home_page_logo:310dd43d-abfc-4c4e-a674-cd76a405fee6'
+  module:
+    - block_content
+    - system
+  theme:
+    - voltahall
+id: voltahall_homepagelogo37
+theme: voltahall
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:310dd43d-abfc-4c4e-a674-cd76a405fee6'
+settings:
+  id: 'block_content:310dd43d-abfc-4c4e-a674-cd76a405fee6'
+  label: 'Home page Logo: 37'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

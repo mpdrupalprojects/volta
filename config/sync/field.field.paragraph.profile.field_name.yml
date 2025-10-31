@@ -1,0 +1,22 @@
+uuid: a9a0916d-d3a4-4458-8f92-8e2b6c5d0ba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.profile
+  module:
+    - text
+id: paragraph.profile.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: profile
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

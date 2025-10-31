@@ -4,18 +4,20 @@ status: true
 dependencies:
   config:
     - block_content.type.mini_slideshow
-    - field.field.block_content.mini_slideshow.body
+    - field.field.block_content.mini_slideshow.field_slide_item
   module:
-    - text
+    - entity_reference_revisions
 id: block_content.mini_slideshow.default
 targetEntityType: block_content
 bundle: mini_slideshow
 mode: default
 content:
-  body:
-    type: text_default
+  field_slide_item:
+    type: entity_reference_revisions_entity_view
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     weight: 0
     region: content

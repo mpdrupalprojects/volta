@@ -1,0 +1,45 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <h3 class="text-center mb-4">{{ content.field_title.0 }}</h3>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators-arrows">
+                <div class="carousel-indicators">
+                    {% for i in content.field_trailblazer_slides['#items']|keys %}
+                        {% if i == 0 %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" class="active" aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
+                        {% else %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" aria-label="Slide {{ i + 1 }}"></button>
+                        {% endif %}
+                    {% endfor %}
+                </div>    
+            </div>
+            <div class="carousel-inner trailblazers-carousel-inner">
+                {% for i in content.field_trailblazer_slides['#items']|keys %}
+                    {% if i == 0 %}
+                        <div class="carousel-item active">
+                            {{ content.field_trailblazer_slides[i] }}
+                        </div>
+                    {% else %}
+                        <div class="carousel-item">
+                            {{ content.field_trailblazer_slides[i] }}
+                        </div>
+                    {% endif %}
+                {% endfor %}    
+            </div>   
+        </div>
+    {% endblock %}
+</div>    

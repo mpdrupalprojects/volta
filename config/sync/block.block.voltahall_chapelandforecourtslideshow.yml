@@ -1,0 +1,30 @@
+uuid: e03e1a66-fea8-49d8-85d3-21d156d93761
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:slideshow:85150d92-8547-414f-9374-4b1435f43e28'
+  module:
+    - block_content
+    - system
+  theme:
+    - voltahall
+id: voltahall_chapelandforecourtslideshow
+theme: voltahall
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:85150d92-8547-414f-9374-4b1435f43e28'
+settings:
+  id: 'block_content:85150d92-8547-414f-9374-4b1435f43e28'
+  label: 'Chapel and Forecourt Slideshow'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/26

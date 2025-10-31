@@ -1,0 +1,10 @@
+uuid: 2118be66-7b7f-45d7-bc30-4d437cc9f0ab
+langcode: en
+status: true
+dependencies: {  }
+id: trailblazers_slide
+label: 'Trailblazers Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

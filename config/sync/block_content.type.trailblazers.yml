@@ -1,0 +1,8 @@
+uuid: f6222395-ed1c-4a1d-87fd-11fa66aa864b
+langcode: en
+status: true
+dependencies: {  }
+id: trailblazers
+label: Trailblazers
+revision: false
+description: 'A block for alumnae and trailblazers'

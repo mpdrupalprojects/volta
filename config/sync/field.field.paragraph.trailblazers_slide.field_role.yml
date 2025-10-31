@@ -1,0 +1,22 @@
+uuid: e4e60d44-7171-462e-b246-6fad948edd32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_role
+    - paragraphs.paragraphs_type.trailblazers_slide
+  module:
+    - text
+id: paragraph.trailblazers_slide.field_role
+field_name: field_role
+entity_type: paragraph
+bundle: trailblazers_slide
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

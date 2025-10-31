@@ -1,0 +1,22 @@
+uuid: 9bce5503-a60f-47aa-aad8-6ea0f0003d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slideshow
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.slideshow.field_title
+field_name: field_title
+entity_type: block_content
+bundle: slideshow
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

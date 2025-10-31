@@ -1,0 +1,56 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators-arrows">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <div class="carousel-indicators">
+                    {% for i in content.field_slide_item['#items']|keys %}
+                        {% if i == 0 %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" class="active" aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
+                        {% else %}
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" aria-label="Slide {{ i + 1 }}"></button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="carousel-inner">
+                {% for i in content.field_slide_item['#items']|keys %}
+                    {% if i == 0 %}
+                        <div class="carousel-item active">
+                            {{ content.field_slide_item[i] }}
+                            {% if content.field_title.0 %}
+                                <div class="carousel-caption">
+                                    <h1 class="page-title">{{ content.field_title.0 }}</h1>
+                                </div>    
+                            {% endif %}
+                        </div>
+                    {% else %}
+                        <div class="carousel-item">
+                            {{ content.field_slide_item[i] }}
+                        </div>
+                    {% endif %}
+                {% endfor %}    
+            </div>   
+        </div>
+    {% endblock %}
+</div>    

@@ -1,0 +1,8 @@
+uuid: 108bc657-71f3-40ec-bffc-49968ddf11d6
+langcode: en
+status: true
+dependencies: {  }
+id: slideshow
+label: Slideshow
+revision: false
+description: 'A block to add a main slideshow that is wide and placed in the hero section(region)'

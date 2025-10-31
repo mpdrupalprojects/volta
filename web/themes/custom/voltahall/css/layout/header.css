@@ -14,6 +14,15 @@
     z-index: 99;
 }
 
+.site-logo{
+    max-height: 200px;
+}
+
+.site-logo img{
+   width: 100%;
+   height: auto;
+}
+
 .home-navigation-header [role="navigation"] .navbar-links li{
     margin-right: 16px;
 }
@@ -74,6 +83,12 @@
 
 }
 
+.collapsing{
+    position: relative;
+    height: 0;
+    transition: height 0.5s ease;
+    overflow: hidden;
+}
 
 .collapse:not(.show) {
    display: none;

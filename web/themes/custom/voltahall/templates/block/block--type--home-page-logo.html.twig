@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      <a href="{{ content.field_link[0]['#url'] }}" rel="home" class="site-logo">
+	      {{ content.field_home_page_logo.0 }}
+      </a>
+    {% endblock %}
+</div>    

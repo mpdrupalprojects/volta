@@ -1,0 +1,26 @@
+uuid: 4671af17-55ef-47f3-b90e-56ec9deb462f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide_item.field_image
+    - paragraphs.paragraphs_type.slide_item
+  module:
+    - media
+id: paragraph.slide_item.default
+targetEntityType: paragraph
+bundle: slide_item
+mode: default
+content:
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

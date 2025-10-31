@@ -1,0 +1,37 @@
+uuid: b279471e-9fc9-430d-b770-55f76d4fb37f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.executives
+    - field.storage.block_content.field_profiles
+    - paragraphs.paragraphs_type.profile
+  module:
+    - entity_reference_revisions
+id: block_content.executives.field_profiles
+field_name: field_profiles
+entity_type: block_content
+bundle: executives
+label: 'Executive Profiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 4
+        enabled: false
+      profile:
+        weight: 5
+        enabled: true
+      slide_item:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

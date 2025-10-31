@@ -1,0 +1,41 @@
+uuid: 1474c622-eb26-4f6e-8cf2-b58ee62f433f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.executives
+    - field.field.block_content.executives.body
+    - field.field.block_content.executives.field_profiles
+    - field.field.block_content.executives.field_title
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.executives.default
+targetEntityType: block_content
+bundle: executives
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_profiles:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

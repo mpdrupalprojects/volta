@@ -1,0 +1,40 @@
+uuid: fa422e04-030d-4ce0-a2ac-a3c299bf6ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.trailblazers
+    - field.storage.block_content.field_trailblazer_slides
+    - paragraphs.paragraphs_type.trailblazers_slide
+  module:
+    - entity_reference_revisions
+id: block_content.trailblazers.field_trailblazer_slides
+field_name: field_trailblazer_slides
+entity_type: block_content
+bundle: trailblazers
+label: 'Trailblazer Slides'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      trailblazers_slide: trailblazers_slide
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 5
+        enabled: false
+      profile:
+        weight: 6
+        enabled: false
+      slide_item:
+        weight: 7
+        enabled: false
+      trailblazers_slide:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

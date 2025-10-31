@@ -1,0 +1,22 @@
+uuid: d8a56d14-7201-4e34-8f3d-a3e7e1275ebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_role
+    - paragraphs.paragraphs_type.profile
+  module:
+    - text
+id: paragraph.profile.field_role
+field_name: field_role
+entity_type: paragraph
+bundle: profile
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text
