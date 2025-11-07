@@ -13,7 +13,7 @@
 
 {% if node.field_page_banner_image is not empty  %}
 <div class="vh-full-width page-banner facilities" style="background-image: url({{ media_url }})">
-    <h1 class="page-title">{{ label }}</h1>  
+    <h1 class="page-title mb-5">{{ label }}</h1>  
 </div>
 {% endif %}
 
@@ -52,7 +52,7 @@
     <div class="row align-items-center">
       <div class="col-md-6">
         {% if node.field_caption is not empty %}
-          <div class="facility-caption pe-4">
+          <div class="facility-caption pe-5">
             <h3 class="mb-2">For Booking and Enquiry</h3>
             {{ node.field_caption.value | raw }}
           </div>

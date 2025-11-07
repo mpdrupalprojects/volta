@@ -13,7 +13,7 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-        <div class="executives-block py-5">
+        <div class="executives-block py-6">
             <div class="executives-header">
                 <h3 class="text-center">{{ content.field_title.0 }}</h3>
                 <div class="text-center w-75 mx-auto">{{ content.body.0 }}</div>
@@ -39,8 +39,9 @@
                     </div>    
                     {% endif %}
 
-                    <a class="show-more-less text-center mt-3 link-dark d-block fw-bold" data-bs-toggle="collapse" href="#part-two" aria-expanded="false" aria-controls="collapseExample">Show More</a>
-
+                    {% if content.field_profiles['#items']|length >= 5 %}
+                        <a class="show-more-less text-center mt-3 link-dark d-block fw-bold" data-bs-toggle="collapse" href="#part-two" aria-expanded="false" aria-controls="collapseExample">Show More</a>
+                    {% endif %}
                 
             </div>
         </div>

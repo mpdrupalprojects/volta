@@ -9,11 +9,12 @@
         <div class="col-md-6 trailblazer-slide-image-col">
             {{ content.field_profile_image.0 }}
         </div>
-        <div class="col-md-6 trailblazer-slide-content-col">    
-            <div class="trailblazer-slide-caption">
-                <div class="trailblazer-slide-description">
-                    {{ content.field_body.0 }}
-                    {{ content.field_name.0 }}
+        <div class="col-md-6 trailblazer-slide-content-col p-4">    
+            <div class="trailblazer-slide-description d-flex flex-column justify-content-between h-100">
+                
+                {{ content.field_body.0 }}
+                <div class="trailblazer-slide-name-role mt-4">
+                    <h4 class="fw-bold mb-3">{{ content.field_name.0 }}</h4>
                     {{ content.field_role.0 }}
                 </div>
             </div>

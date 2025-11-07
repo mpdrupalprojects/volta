@@ -3,7 +3,6 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'mb-3',
   ]
 %}
 
@@ -14,12 +13,15 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-        <div class="profile">
-            <div class="profile-img mb-2">
-                {{ content.field_profile_image.0 }}
+        <div class="rates-content">
+            {{ content.body.0 }}
+            <div class="row">
+            {% for i in content.field_rates['#items']|keys %}
+                <div class="col-md-4 mb-4">
+                    <div class="rates">{{ content.field_rates[i] }}</div>
+                </div>
+            {% endfor %}
             </div>
-            <h5 class="text-center">{{ content.field_name.0 }}</h5>
-            <span class="d-block text-center role">{{ content.field_role.0 }}</span>
         </div>
     {% endblock %}
-</div> 
+</div>    

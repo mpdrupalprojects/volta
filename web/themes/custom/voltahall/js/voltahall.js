@@ -27,4 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
     collapseEl.addEventListener('hide.bs.collapse', function () {
       triggerEl.textContent = 'Show more';
     });
-  });
+});

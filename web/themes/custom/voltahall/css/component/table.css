@@ -1,0 +1,36 @@
+/* Table Block */
+.tablefield{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--vh-black);
+    border-collapse: collapse;
+    border-color: var(--ug-grey-lines);
+    border-style: solid;
+    border-width: 1px;
+    border-spacing: 0;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+.tablefield th{
+    padding: .5rem .5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--ug-grey-lines);
+    border-right: 1px solid var(--ug-grey-lines);
+}
+
+table>tbody>tr:nth-of-type(odd)>* {
+    padding: .5rem .5rem;
+    border-bottom: 1px solid var(--ug-grey-lines);
+    border-right: 1px solid var(--ug-grey-lines);
+    background-color: #fbfbfb;
+}
+
+table>tbody>tr:nth-of-type(even)>* {
+    padding: .5rem .5rem;
+    border-bottom: 1px solid var(--ug-grey-lines);
+    border-right: 1px solid var(--ug-grey-lines);
+}

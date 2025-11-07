@@ -165,3 +165,21 @@ function voltahall_preprocess_layout(array &$variables) {
     }
   } 
 }
+
+function voltahall_preprocess_views_view(array &$variables) {
+  $view = $variables['view'];
+
+  // Replace 'people' and 'page_1' with your view ID and display ID.
+  if ($view->id() === 'people' && $view->current_display === 'block_1') {
+    // Try to get the value from the URL query (same source as your token).
+    $level = \Drupal::request()->query->get('field_staff_category_value');
+
+    if (!empty($level)) {
+      // Replace underscores with spaces and make Title Case (Support Staff).
+      $label = ucwords(strtolower(str_replace('_', ' ', $level)));
+
+      // Replace header with a simple render array (safe markup)
+      $variables['staff_category'] = $label;
+    }
+  }
+}

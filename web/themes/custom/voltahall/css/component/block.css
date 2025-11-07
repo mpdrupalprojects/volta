@@ -68,6 +68,11 @@
     font-weight: 200;
 }
 
+/* Mini Banner */
+.mini-banner-content{
+    max-width: 800px;
+}
+
 /* Profile */
 .profile-img img{
     max-width: 100%;
@@ -255,6 +260,20 @@
     height: 100%;
 }
 
+.banner-caption{
+    color: var(--vh-white);
+    max-width: 700px;
+}
+
+.banner-header{
+    font-size: clamp(2.5rem, 5vw, 4.85rem);
+    font-weight: 500;
+}
+.banner-amp{
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 300;
+}
+
 /* Info Block(Image Left Right) */
 .info-image-wrapper{
     border-radius: 8px;
@@ -264,25 +283,99 @@
 /* People Views */
 .form-item-field-staff-category-value ul{
     list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0 0 1em 0 !important;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    overflow-x: auto;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
 }
 
 .form-item-field-staff-category-value ul li{
-    position: relative;
+    padding: 0.8em 0 !important;
 }
 
 .form-item-field-staff-category-value ul li a{
     color: var(--vh-black);
-    font-weight: 500;
+    padding: 0.5em !important;
+    display: block;
+    border: 2px solid var(--ug-grey-lines);
+    border-radius: 8px;
+    text-align: center;
     text-decoration: none;
-
+    height: 100%;
+    min-width: 160px;
 }
+
 .form-item-field-staff-category-value ul li a.bef-link--selected{
-    color: var(--vh-blue);
+    color: var(--vh-white);
+    background-color: var(--vh-blue);
+}
+
+
+@media (min-width: 768px){
+    #views-exposed-form-people-block-1{
+        position: sticky;
+        top: 5%;
+    }
+
+    .form-item-field-staff-category-value ul{
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-item-field-staff-category-value ul li{
+        position: relative;
+        padding: 0 !important;
+    }
+
+    .form-item-field-staff-category-value ul li a{
+        color: var(--vh-black);
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0 !important;
+        border: none;
+        background: none;
+        text-align: left;
+    }
+
+    .form-item-field-staff-category-value ul li a.bef-link--selected{
+        color: var(--vh-blue);
+        background-color: transparent;
+    }
+}
+
+
+/* Tutors */
+#views-exposed-form-people-tutors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#views-exposed-form-people-tutors .form-item{
+    position: relative;
+}
+
+#views-exposed-form-people-tutors .form-item input{
+    border: 1px solid var(--ug-grey-lines);
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+#views-exposed-form-people-tutors .form-item::after{
+    content: '\f52A';
+    font-family: 'bootstrap-icons';
+    font-weight: 400;
+    position: absolute;
+    right: 10px;
+    top:8px
 }
 
 /* Mini Slideshow */
@@ -400,4 +493,60 @@
 /* Executives */
 .show-more-less{
     color: var(--vh-black);
+}
+
+/* Alumni Slideshow */
+.trailblazers-slideshow-container{
+    padding: 3.5rem 0;
+}
+
+.trailblazer-slide-image-col img{
+    border-radius: 12px;
+    width: 100%;
+}
+
+.trailblazer-slide-content-col{
+    border-radius: 12px;
+}
+
+.trailblazer-slide-description p{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.trailblazers-carousel-indicators-arrows{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.2rem 1rem;
+}
+
+.trailblazers-carousel-indicators-arrows .carousel-indicators button{
+    border: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--ug-grey-lines);
+}
+
+.trailblazers-carousel-indicators-arrows .carousel-indicators button.active{
+    background-color: var(--vh-blue);
+}
+
+/* Rates */
+.rates-content{
+    padding: 4rem 2rem;
+}
+
+.rates-content>p{
+    margin-bottom: 2rem;
+}
+
+.rates{
+    border-left: 3px solid var(--vh-yellow);
+    padding-left: 8px;
+}
+
+/* Notices */
+.notices-content{
+    background-color: #e9f6ff
 }

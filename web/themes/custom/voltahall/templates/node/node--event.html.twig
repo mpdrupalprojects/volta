@@ -37,9 +37,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="events-card">
-                        {% if content.field_event_image.0 %}
+                        {% if content.field_image.0 %}
                         <div class="event_banner mb-5">
-                            {{ content.field_event_image.0 }}
+                            {{ content.field_image.0 }}
                         </div>
                         {% endif %}
                         <div class="event_title pb-4">
@@ -82,7 +82,7 @@
                     
                             {# {% if content.field_time_range.0 %}<span class="time">{{ content.field_time_range.0 }}</span>{% endif %} #}
 
-                            {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue"><iconify-icon icon="gg:pin" width="24" height="24"></iconify-icon> {{ content.field_venue.0 }}</span></div>{% endif %}
+                            {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue">{{ content.field_venue.0 }}</span></div>{% endif %}
 
                             <div class="event_calendar_share d-flex mt-3">
                                 {% set addcalendar = content.field_add_to_calendar.0["#markup"] %}
@@ -139,7 +139,7 @@
                 
                         {# {% if content.field_time_range.0 %}<span class="time">{{ content.field_time_range.0 }}</span>{% endif %} #}
 
-                        {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue"><iconify-icon icon="gg:pin" width="24" height="24"></iconify-icon> {{ content.field_venue.0 }}</span></div>{% endif %}
+                        {% if content.field_venue.0 %}<div class="event_venue pt-4"><span class="venue">{{ content.field_venue.0 }}</span></div>{% endif %}
 
                         <div class="event_calendar_share d-flex mt-3">
                             {% set addcalendar = content.field_add_to_calendar.0["#markup"] %}

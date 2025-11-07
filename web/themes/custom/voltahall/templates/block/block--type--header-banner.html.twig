@@ -13,13 +13,20 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
+        {% set position = content.field_content_orientation[0]['#markup'] %}
+        {% if position == 'Center' %}
+          {% set m_auto = 'm-auto' %}
+        {% else %}
+          {% set m_auto = '' %}
+        {% endif %}
         <div class="mini-banner py-5">
-            {{ content.body.0 }}
+            <div class="mini-banner-content {{ m_auto }}">{{ content.body.0 }}
             {% if content.field_document.0 %}
-            <div class="mt-3 mb-3">
-              <a class="vh-button-document" href= "{{ content.field_document.0 }}"> {{ content.field_document['#items'][0].description  }} </a>
-            </div>
+              <div class="mt-3 mb-3">
+                <a class="vh-button-document" href= "{{ content.field_document.0 }}"> {{ content.field_document['#items'][0].description  }} </a>
+              </div>
             {% endif %}
+            </div>
         </div>
         
     {% endblock %}

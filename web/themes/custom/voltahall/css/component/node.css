@@ -71,6 +71,11 @@
 
 
 /* Display for Upcoming Events Node */
+.event_banner img{
+    border-radius: 8px;
+    width: 100%;
+}
+
 .event_title{
     border-bottom: 1px solid #e0e0e0;
 }
@@ -136,6 +141,16 @@
     flex: 0 1 50%;
 }
 
+.event_side_card .venue::before {
+    font-family: "bootstrap-icons";
+    content: "\F3E8";
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 4px;
+    vertical-align: text-bottom;
+    color: var(--vh-blue);
+}
+
 
 /* Facilities */
 @media (min-width: 768px) {
@@ -144,9 +159,6 @@
         border-right: 1px solid var(--vh-black);
     }
 
-    .facility-caption{
-        padding-left: 1.5rem;
-    }
 }
 
 .facilities-contact, .facilities-email{
